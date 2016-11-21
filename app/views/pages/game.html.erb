@@ -1,0 +1,13 @@
+<h1>Play some scrabbles!</h1>
+
+<p>Here is your grid:</p>
+<%= @grid.chars %>
+<p>Enter your best guess</p>
+<form action="/score">
+  <!-- <label for="guess">Enter your best guess</label> -->
+  <input type="text" name="best_guess" placeholder="Word">
+  <input type="hidden" name="grid" value="<%= @grid %>">
+  <input type="hidden" name="start_time" value ="<%= Time.now %>">
+  <input type="submit" value="Go on!" class="btn btn-primary">
+
+</form>
